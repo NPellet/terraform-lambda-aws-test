@@ -1,7 +1,7 @@
 
 
 provider "aws" {
-  region="us-east-1"
+  region="eu-central-1"
 }
 
 
@@ -15,8 +15,8 @@ module "lambda" {
   
   create_package = false
    s3_existing_package = {
-    bucket = "some_bucket"
-    key    = "some_key"
+    bucket = "zipped-lambda-artifacts-441772730001"
+    key    = "NPellet/60faeeb0a60a7818342468ef0048b8f8cd3bdd85.zip"
   }
   
 }
