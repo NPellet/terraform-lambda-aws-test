@@ -1,4 +1,4 @@
-name: kubeconform
+name: zip_push_s3
 on: push
 jobs:
   kubeconform:
@@ -16,6 +16,6 @@ jobs:
       env:
         SOURCE_DIR: './artifacts'
         AWS_REGION: 'eu-central-1'
-        AWS_S3_BUCKET: 'zipped-lambda-artifacts'
+        AWS_S3_BUCKET: 'zipped-lambda-artifacts-441772730001'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
