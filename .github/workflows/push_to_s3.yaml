@@ -5,16 +5,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Make artifact directory
-      run: mkdir -p ./artifacts/${{ github.repository }}
+      run: mkdir -p ./artifacts/
 
     - name: Create Zip File
       run: |
         ls -lsa
         pwd
         ls src
-        zip -r ./artifacts/${{ github.repository }}/${{ github.sha }}.zip ./src
+        zip -r ./artifacts/${{ github.repository }}.${{ github.ref_name }}.zip ./src
 
     - name: Push Zip to S3
       uses: jakejarvis/s3-sync-action@v0.3.1
