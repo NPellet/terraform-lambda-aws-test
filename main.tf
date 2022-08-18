@@ -32,9 +32,9 @@ variable "description" {
 module "lambda" {
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = vars.name
-  description   = vars.description
-  handler       = vars.handler
+  function_name = var.name
+  description   = var.description
+  handler       = var.handler
   runtime       = "nodejs16.x"
 
   create_package = false
