@@ -10,13 +10,13 @@ module "lambda" {
 
   function_name = "my-lambda1"
   description   = "My awesome lambda function"
-  handler       = "index.lambda_handler"
+  handler       = "main.handler"
   runtime       = "nodejs16.x"
   
   create_package = false
    s3_existing_package = {
     bucket = "zipped-lambda-artifacts-441772730001"
-    key    = "NPellet/60faeeb0a60a7818342468ef0048b8f8cd3bdd85.zip"
+    key    = "NPellet/terraform-lambda-aws-test/879060db2eaa437ed18d06e016a3918cb9f72cd7.zip"
   }
   
 }
